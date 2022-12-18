@@ -56,9 +56,10 @@
             this.PlusButton.Name = "PlusButton";
             this.PlusButton.Size = new System.Drawing.Size(75, 75);
             this.PlusButton.TabIndex = 0;
+            this.PlusButton.Tag = "0";
             this.PlusButton.Text = "+";
             this.PlusButton.UseVisualStyleBackColor = true;
-            this.PlusButton.Click += new System.EventHandler(this.PlusButton_Click);
+            this.PlusButton.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // mainTextBox
             // 
@@ -76,10 +77,11 @@
             this.MinusButton.Location = new System.Drawing.Point(308, 428);
             this.MinusButton.Name = "MinusButton";
             this.MinusButton.Size = new System.Drawing.Size(75, 75);
-            this.MinusButton.TabIndex = 2;
+            this.MinusButton.TabIndex = 1;
+            this.MinusButton.Tag = "2";
             this.MinusButton.Text = "-";
             this.MinusButton.UseVisualStyleBackColor = true;
-            this.MinusButton.Click += new System.EventHandler(this.MinusButton_Click);
+            this.MinusButton.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // SixButton
             // 
@@ -90,7 +92,7 @@
             this.SixButton.TabIndex = 3;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
-            this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
+            this.SixButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // FiveButton
             // 
@@ -101,7 +103,7 @@
             this.FiveButton.TabIndex = 4;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
-            this.FiveButton.Click += new System.EventHandler(this.FiveButton_Click);
+            this.FiveButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // FourButton
             // 
@@ -112,7 +114,7 @@
             this.FourButton.TabIndex = 5;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
-            this.FourButton.Click += new System.EventHandler(this.FourButton_Click);
+            this.FourButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // ThreeButton
             // 
@@ -123,7 +125,7 @@
             this.ThreeButton.TabIndex = 6;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
-            this.ThreeButton.Click += new System.EventHandler(this.ThreeButton_Click);
+            this.ThreeButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // TwoButton
             // 
@@ -134,7 +136,7 @@
             this.TwoButton.TabIndex = 7;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
-            this.TwoButton.Click += new System.EventHandler(this.TwoButton_Click);
+            this.TwoButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // OneButton
             // 
@@ -145,7 +147,7 @@
             this.OneButton.TabIndex = 8;
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = true;
-            this.OneButton.Click += new System.EventHandler(this.OneButton_Click);
+            this.OneButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // NineButton
             // 
@@ -156,7 +158,7 @@
             this.NineButton.TabIndex = 9;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
-            this.NineButton.Click += new System.EventHandler(this.NineButton_Click);
+            this.NineButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // EightButton
             // 
@@ -167,7 +169,7 @@
             this.EightButton.TabIndex = 10;
             this.EightButton.Text = "8";
             this.EightButton.UseVisualStyleBackColor = true;
-            this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
+            this.EightButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // SevenButton
             // 
@@ -178,7 +180,7 @@
             this.SevenButton.TabIndex = 11;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
-            this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
+            this.SevenButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // divisionButton
             // 
@@ -187,9 +189,10 @@
             this.divisionButton.Name = "divisionButton";
             this.divisionButton.Size = new System.Drawing.Size(75, 75);
             this.divisionButton.TabIndex = 12;
+            this.divisionButton.Tag = "3";
             this.divisionButton.Text = "/";
             this.divisionButton.UseVisualStyleBackColor = true;
-            this.divisionButton.Click += new System.EventHandler(this.DivisionButton_Click);
+            this.divisionButton.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // multiplyButton
             // 
@@ -198,9 +201,10 @@
             this.multiplyButton.Name = "multiplyButton";
             this.multiplyButton.Size = new System.Drawing.Size(75, 75);
             this.multiplyButton.TabIndex = 13;
+            this.multiplyButton.Tag = "2";
             this.multiplyButton.Text = "*";
             this.multiplyButton.UseVisualStyleBackColor = true;
-            this.multiplyButton.Click += new System.EventHandler(this.multiplyButton_Click);
+            this.multiplyButton.Click += new System.EventHandler(this.OperationButton_Click);
             // 
             // EqualButton
             // 
@@ -222,7 +226,7 @@
             this.ZeroButton.TabIndex = 15;
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = true;
-            this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
+            this.ZeroButton.Click += new System.EventHandler(this.DigitClick);
             // 
             // ClearButton
             // 

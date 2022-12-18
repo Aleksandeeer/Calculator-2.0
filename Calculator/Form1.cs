@@ -12,15 +12,15 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-        List<int> terms = new List<int>();
-        operations op = new operations();
+        List<double> terms = new List<double>();
+        Operation op = new Operation();
 
-        enum operations
+        enum Operation
         {
-            plus,
-            minus,
-            division,
-            multiply
+            Plus = 0,
+            Minus,
+            Multiply,
+            Division
         }
 
         public Form1()
@@ -28,89 +28,28 @@ namespace Calculator
             InitializeComponent();
         }
 
-        private void OneButton_Click(object sender, EventArgs e)
+        private void DigitClick(object sender, EventArgs e)
         {
-            mainTextBox.Text += "1";
+            Button button = sender as Button;
+            int digit;
+            if (button != null && int.TryParse(button.Text, out digit) == true)
+            {
+                mainTextBox.Text += digit.ToString();
+            }
+            else
+            {
+                throw new Exception("not a cipher");
+            }
         }
-
-        private void TwoButton_Click(object sender, EventArgs e)
+        private void OperationButton_Click(object sender, EventArgs e)
         {
-            mainTextBox.Text += "2";
-        }
-
-        private void ThreeButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "3";
-        }
-
-        private void FourButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "4";
-        }
-
-        private void FiveButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "5";
-        }
-
-        private void SixButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "6";
-        }
-
-        private void SevenButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "7";
-        }
-
-        private void EightButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "8";
-        }
-
-        private void NineButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "9";
-        }
-
-        private void ZeroButton_Click(object sender, EventArgs e)
-        {
-            mainTextBox.Text += "0";
-        }
-
-        private void PlusButton_Click(object sender, EventArgs e)
-        {
-            terms.Add(Convert.ToInt32(mainTextBox.Text));
-            
-            op = operations.plus;
-
-            mainTextBox.Text = "";
-        }
-
-        private void MinusButton_Click(object sender, EventArgs e)
-        {
-            terms.Add(Convert.ToInt32(mainTextBox.Text));
-
-            op = operations.minus;
-
-            mainTextBox.Text = "";
-        }
-
-        private void DivisionButton_Click(object sender, EventArgs e)
-        {
-            terms.Add(Convert.ToInt32(mainTextBox.Text));
-
-            op = operations.division;
-
-            mainTextBox.Text = "";
-        }
-
-        private void multiplyButton_Click(object sender, EventArgs e)
-        {
-            terms.Add(Convert.ToInt32(mainTextBox.Text));
-
-            op = operations.multiply;
-
+            terms.Add(Convert.ToDouble(mainTextBox.Text));
+            Button button = sender as Button;
+            int op;
+            if(button != null && int.TryParse(button.Tag.ToString(),out op))
+            {
+                this.op = (Operation)op;
+            }
             mainTextBox.Text = "";
         }
 
@@ -122,62 +61,39 @@ namespace Calculator
             }
             terms.Clear();
         }
-
-        private void EqualButton_Click(object sender, EventArgs e)
+        private void SwitchOperation()
         {
-            terms.Add(Convert.ToInt32(mainTextBox.Text));
-            int result;
-
-            textBox1.Text = "";
-            for (int i = 0; i < terms.Count(); i++)
-            {
-                textBox1.Text += terms.ElementAt(i).ToString();
-            }
-
-
+            double result =0;
             switch (op)
             {
-                case operations.plus:
+                case Operation.Plus:
                     {
                         result = terms.ElementAt(0) + terms.ElementAt(1);
-
-                        mainTextBox.Text = result.ToString();
-
-                        terms.Clear();
-
                         break;
                     }
-                case operations.minus:
+                case Operation.Minus:
                     {
                         result = terms.ElementAt(0) - terms.ElementAt(1);
-
-                        mainTextBox.Text = result.ToString();
-
-                        terms.Clear();
-
                         break;
                     }
-                case operations.division:
+                case Operation.Division:
                     {
                         result = terms.ElementAt(0) / terms.ElementAt(1);
-
-                        mainTextBox.Text = result.ToString();
-
-                        terms.Clear();
-
                         break;
                     }
-                case operations.multiply:
+                case Operation.Multiply:
                     {
-                        result = terms.ElementAt(0) * terms.ElementAt(1); 
-
-                        mainTextBox.Text = result.ToString();
-
-                        terms.Clear();
-
+                        result = terms.ElementAt(0) * terms.ElementAt(1);
                         break;
                     }
             }
+            mainTextBox.Text = result.ToString();
+            terms.Clear();
+        }
+        private void EqualButton_Click(object sender, EventArgs e)
+        {
+            terms.Add(Convert.ToDouble(mainTextBox.Text));       
+            SwitchOperation();       
         }
 
         private void FullClearButton_Click(object sender, EventArgs e)
