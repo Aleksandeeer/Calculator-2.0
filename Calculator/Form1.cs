@@ -102,7 +102,7 @@ namespace Calculator
             if (mainTextBox.Text.Length == 0)
                 return;
                 
-            if(mainTextBox.Text.Length != 0 && mainTextBox.Text[mainTextBox.Text.Length - 1] != ',')
+            if(mainTextBox.Text.Length != 0 && !mainTextBox.Text.Contains(","))
             {
                 mainTextBox.Text += ",";
             }
