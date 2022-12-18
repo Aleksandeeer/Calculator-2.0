@@ -97,6 +97,15 @@ namespace Calculator
             }
         }
 
-       
+        private void pointButton_Click(object sender, EventArgs e)
+        {
+            if (mainTextBox.Text.Length == 0)
+                return;
+                
+            if(mainTextBox.Text.Length != 0 && mainTextBox.Text[mainTextBox.Text.Length - 1] != ',')
+            {
+                mainTextBox.Text += ",";
+            }
+        }
     }
 }

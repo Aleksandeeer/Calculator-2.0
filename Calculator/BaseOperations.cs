@@ -12,7 +12,8 @@ namespace Calculator
         Plus,
         Minus,
         Multiply,
-        Division
+        Division,
+        Pow
     }
     public class BaseOperations : IOperation
     {
@@ -39,6 +40,9 @@ namespace Calculator
                     break;
                 case Operation.Division:
                     execute = (double a, double b) => (a / b);
+                    break;
+                case Operation.Pow:
+                    execute = (double a, double b) => (Math.Pow(a, b));
                     break;
                 default:
                     execute = null;
