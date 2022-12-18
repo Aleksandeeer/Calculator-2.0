@@ -56,7 +56,7 @@
             this.PlusButton.Name = "PlusButton";
             this.PlusButton.Size = new System.Drawing.Size(75, 75);
             this.PlusButton.TabIndex = 0;
-            this.PlusButton.Tag = "0";
+            this.PlusButton.Tag = "1";
             this.PlusButton.Text = "+";
             this.PlusButton.UseVisualStyleBackColor = true;
             this.PlusButton.Click += new System.EventHandler(this.OperationButton_Click);
@@ -189,7 +189,7 @@
             this.divisionButton.Name = "divisionButton";
             this.divisionButton.Size = new System.Drawing.Size(75, 75);
             this.divisionButton.TabIndex = 12;
-            this.divisionButton.Tag = "3";
+            this.divisionButton.Tag = "4";
             this.divisionButton.Text = "/";
             this.divisionButton.UseVisualStyleBackColor = true;
             this.divisionButton.Click += new System.EventHandler(this.OperationButton_Click);
@@ -201,7 +201,7 @@
             this.multiplyButton.Name = "multiplyButton";
             this.multiplyButton.Size = new System.Drawing.Size(75, 75);
             this.multiplyButton.TabIndex = 13;
-            this.multiplyButton.Tag = "2";
+            this.multiplyButton.Tag = "3";
             this.multiplyButton.Text = "*";
             this.multiplyButton.UseVisualStyleBackColor = true;
             this.multiplyButton.Click += new System.EventHandler(this.OperationButton_Click);
