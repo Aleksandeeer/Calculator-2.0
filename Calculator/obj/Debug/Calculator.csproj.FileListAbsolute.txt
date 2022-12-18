@@ -20,3 +20,8 @@ C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\obj\Debug\Calculat
 C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\obj\Debug\Calculator.exe
 C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\obj\Debug\Calculator.pdb
+C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\bin\Debug\MathNet.Numerics.dll
+C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\bin\Debug\System.ValueTuple.dll
+C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\bin\Debug\MathNet.Numerics.xml
+C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\bin\Debug\System.ValueTuple.xml
+C:\Users\makur_4p3ltuj\Source\Repos\Calculator-2.0\Calculator\obj\Debug\Calculator.csproj.CopyComplete

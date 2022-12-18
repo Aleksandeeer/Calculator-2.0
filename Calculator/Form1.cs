@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MathNet.Numerics; 
 
 namespace Calculator
 {
@@ -99,6 +100,12 @@ namespace Calculator
         private void FullClearButton_Click(object sender, EventArgs e)
         {
             mainTextBox.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }
