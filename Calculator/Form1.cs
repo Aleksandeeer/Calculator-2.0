@@ -89,12 +89,17 @@ namespace Calculator
         private void OperationButton_Click(object sender, EventArgs e)
         {  
             if (double.TryParse(mainTextBox.Text,out double num))
-            {                 
+            {         
+                
                 Button button = sender as Button;
                 Init(num);
                 baseOperations.ChangeOperation((Operation)int.Parse(button.Tag.ToString()));
                 mainTextBox.Text = "";
                 
+            }
+            else if (!mainTextBox.Text.Contains("-"))
+            {
+                mainTextBox.Text += "-";
             }
         }
 
@@ -117,6 +122,46 @@ namespace Calculator
             {
                 mainTextBox.Text = Math.Sqrt(a).ToString();
             }
+        }
+
+        private void gammaButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = SpecialFunctions.Gamma(Convert.ToDouble(mainTextBox.Text)).ToString();
+        }
+
+        private void besselButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = SpecialFunctions.BesselI0(Convert.ToDouble(mainTextBox.Text)).ToString();
+        }
+
+        private void sinButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = Math.Sin(Convert.ToDouble(mainTextBox.Text)).ToString();
+        }
+
+        private void cosButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = Math.Cos(Convert.ToDouble(mainTextBox.Text)).ToString();
+        }
+
+        private void tgButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = Math.Tan(Convert.ToDouble(mainTextBox.Text)).ToString();
+        }
+
+        private void ctgButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = (1 / Math.Tan(Convert.ToDouble(mainTextBox.Text))).ToString();
+        }
+
+        private void piButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = Convert.ToString(Math.PI);
+        }
+
+        private void eButton_Click(object sender, EventArgs e)
+        {
+            mainTextBox.Text = Convert.ToString(Math.E);
         }
     }
 }

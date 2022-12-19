@@ -49,6 +49,14 @@
             this.pointButton = new System.Windows.Forms.Button();
             this.powButton = new System.Windows.Forms.Button();
             this.sqrtButton = new System.Windows.Forms.Button();
+            this.gammaButton = new System.Windows.Forms.Button();
+            this.besselButton = new System.Windows.Forms.Button();
+            this.sinButton = new System.Windows.Forms.Button();
+            this.cosButton = new System.Windows.Forms.Button();
+            this.tgButton = new System.Windows.Forms.Button();
+            this.ctgButton = new System.Windows.Forms.Button();
+            this.piButton = new System.Windows.Forms.Button();
+            this.eButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PlusButton
@@ -211,7 +219,7 @@
             // EqualButton
             // 
             this.EqualButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EqualButton.Location = new System.Drawing.Point(501, 221);
+            this.EqualButton.Location = new System.Drawing.Point(501, 140);
             this.EqualButton.Name = "EqualButton";
             this.EqualButton.Size = new System.Drawing.Size(75, 156);
             this.EqualButton.TabIndex = 14;
@@ -287,11 +295,115 @@
             this.sqrtButton.UseVisualStyleBackColor = true;
             this.sqrtButton.Click += new System.EventHandler(this.sqrtButton_Click);
             // 
+            // gammaButton
+            // 
+            this.gammaButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.gammaButton.Location = new System.Drawing.Point(309, 383);
+            this.gammaButton.Name = "gammaButton";
+            this.gammaButton.Size = new System.Drawing.Size(156, 42);
+            this.gammaButton.TabIndex = 21;
+            this.gammaButton.Tag = "7";
+            this.gammaButton.Text = "гамма";
+            this.gammaButton.UseVisualStyleBackColor = true;
+            this.gammaButton.Click += new System.EventHandler(this.gammaButton_Click);
+            // 
+            // besselButton
+            // 
+            this.besselButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.besselButton.Location = new System.Drawing.Point(309, 431);
+            this.besselButton.Name = "besselButton";
+            this.besselButton.Size = new System.Drawing.Size(156, 42);
+            this.besselButton.TabIndex = 22;
+            this.besselButton.Tag = "7";
+            this.besselButton.Text = "бессель(0)";
+            this.besselButton.UseVisualStyleBackColor = true;
+            this.besselButton.Click += new System.EventHandler(this.besselButton_Click);
+            // 
+            // sinButton
+            // 
+            this.sinButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sinButton.Location = new System.Drawing.Point(147, 383);
+            this.sinButton.Name = "sinButton";
+            this.sinButton.Size = new System.Drawing.Size(117, 42);
+            this.sinButton.TabIndex = 23;
+            this.sinButton.Tag = "7";
+            this.sinButton.Text = "sin";
+            this.sinButton.UseVisualStyleBackColor = true;
+            this.sinButton.Click += new System.EventHandler(this.sinButton_Click);
+            // 
+            // cosButton
+            // 
+            this.cosButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cosButton.Location = new System.Drawing.Point(147, 429);
+            this.cosButton.Name = "cosButton";
+            this.cosButton.Size = new System.Drawing.Size(117, 42);
+            this.cosButton.TabIndex = 24;
+            this.cosButton.Tag = "7";
+            this.cosButton.Text = "cos";
+            this.cosButton.UseVisualStyleBackColor = true;
+            this.cosButton.Click += new System.EventHandler(this.cosButton_Click);
+            // 
+            // tgButton
+            // 
+            this.tgButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tgButton.Location = new System.Drawing.Point(26, 383);
+            this.tgButton.Name = "tgButton";
+            this.tgButton.Size = new System.Drawing.Size(117, 42);
+            this.tgButton.TabIndex = 25;
+            this.tgButton.Tag = "7";
+            this.tgButton.Text = "tg";
+            this.tgButton.UseVisualStyleBackColor = true;
+            this.tgButton.Click += new System.EventHandler(this.tgButton_Click);
+            // 
+            // ctgButton
+            // 
+            this.ctgButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ctgButton.Location = new System.Drawing.Point(27, 429);
+            this.ctgButton.Name = "ctgButton";
+            this.ctgButton.Size = new System.Drawing.Size(117, 42);
+            this.ctgButton.TabIndex = 26;
+            this.ctgButton.Tag = "7";
+            this.ctgButton.Text = "ctg";
+            this.ctgButton.UseVisualStyleBackColor = true;
+            this.ctgButton.Click += new System.EventHandler(this.ctgButton_Click);
+            // 
+            // piButton
+            // 
+            this.piButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.piButton.Location = new System.Drawing.Point(501, 383);
+            this.piButton.Name = "piButton";
+            this.piButton.Size = new System.Drawing.Size(75, 88);
+            this.piButton.TabIndex = 27;
+            this.piButton.Tag = "7";
+            this.piButton.Text = "π";
+            this.piButton.UseVisualStyleBackColor = true;
+            this.piButton.Click += new System.EventHandler(this.piButton_Click);
+            // 
+            // eButton
+            // 
+            this.eButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.eButton.Location = new System.Drawing.Point(501, 302);
+            this.eButton.Name = "eButton";
+            this.eButton.Size = new System.Drawing.Size(75, 75);
+            this.eButton.TabIndex = 28;
+            this.eButton.Tag = "7";
+            this.eButton.Text = "e";
+            this.eButton.UseVisualStyleBackColor = true;
+            this.eButton.Click += new System.EventHandler(this.eButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 392);
+            this.ClientSize = new System.Drawing.Size(604, 483);
+            this.Controls.Add(this.eButton);
+            this.Controls.Add(this.piButton);
+            this.Controls.Add(this.ctgButton);
+            this.Controls.Add(this.tgButton);
+            this.Controls.Add(this.cosButton);
+            this.Controls.Add(this.sinButton);
+            this.Controls.Add(this.besselButton);
+            this.Controls.Add(this.gammaButton);
             this.Controls.Add(this.sqrtButton);
             this.Controls.Add(this.powButton);
             this.Controls.Add(this.pointButton);
@@ -343,6 +455,14 @@
         private System.Windows.Forms.Button pointButton;
         private System.Windows.Forms.Button powButton;
         private System.Windows.Forms.Button sqrtButton;
+        private System.Windows.Forms.Button gammaButton;
+        private System.Windows.Forms.Button besselButton;
+        private System.Windows.Forms.Button sinButton;
+        private System.Windows.Forms.Button cosButton;
+        private System.Windows.Forms.Button tgButton;
+        private System.Windows.Forms.Button ctgButton;
+        private System.Windows.Forms.Button piButton;
+        private System.Windows.Forms.Button eButton;
     }
 }
 
