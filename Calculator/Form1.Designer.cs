@@ -48,6 +48,7 @@
             this.FullClearButton = new System.Windows.Forms.Button();
             this.pointButton = new System.Windows.Forms.Button();
             this.powButton = new System.Windows.Forms.Button();
+            this.sqrtButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PlusButton
@@ -274,11 +275,24 @@
             this.powButton.UseVisualStyleBackColor = true;
             this.powButton.Click += new System.EventHandler(this.OperationButton_Click);
             // 
+            // sqrtButton
+            // 
+            this.sqrtButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sqrtButton.Location = new System.Drawing.Point(390, 140);
+            this.sqrtButton.Name = "sqrtButton";
+            this.sqrtButton.Size = new System.Drawing.Size(75, 75);
+            this.sqrtButton.TabIndex = 20;
+            this.sqrtButton.Tag = "6";
+            this.sqrtButton.Text = "sqrt";
+            this.sqrtButton.UseVisualStyleBackColor = true;
+            this.sqrtButton.Click += new System.EventHandler(this.sqrtButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 392);
+            this.Controls.Add(this.sqrtButton);
             this.Controls.Add(this.powButton);
             this.Controls.Add(this.pointButton);
             this.Controls.Add(this.FullClearButton);
@@ -328,6 +342,7 @@
         private System.Windows.Forms.Button FullClearButton;
         private System.Windows.Forms.Button pointButton;
         private System.Windows.Forms.Button powButton;
+        private System.Windows.Forms.Button sqrtButton;
     }
 }
 

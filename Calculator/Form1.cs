@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -105,6 +106,16 @@ namespace Calculator
             if(mainTextBox.Text.Length != 0 && !mainTextBox.Text.Contains(","))
             {
                 mainTextBox.Text += ",";
+            }
+        }
+
+        private void sqrtButton_Click(object sender, EventArgs e)
+        {
+            double a = Convert.ToDouble(mainTextBox.Text);
+
+            if(a > 0)
+            {
+                mainTextBox.Text = Math.Sqrt(a).ToString();
             }
         }
     }
